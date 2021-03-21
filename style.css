@@ -271,7 +271,7 @@ body {
     position: relative;
 }
 
-.nav-link.current::after {
+.nav-link::after {
     content: "";
     display: block;
     width: 100%;
@@ -280,22 +280,18 @@ body {
     position: absolute;
     left: 0;
     bottom: 0;
-    transform: scaleX();
+    transform: scaleX(0);
     transition: transform cubic-bezier(0.4, 0, 0.2, 1) 250ms;
 }
 
-.nav-link:hover::after {
+.nav-link:hover::after,
+.nav-link.current::after {
     transform: scaleX(1);
 }
 
 .nav-link:hover,
 .nav-link:focus,
-.current,
-.сurrent-portfolio {
-    color: var(--accent-color);
-}
-
-.nav-list-item .current-portfolio {
+.current {
     color: var(--accent-color);
 }
 
